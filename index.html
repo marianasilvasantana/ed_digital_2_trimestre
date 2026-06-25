@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>blog</title>
-        <style>
-            header{
-                background-color:  rgba(255, 192, 203, 0.527) ;
-                color: rgb(0,0,0); 
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                border: 5px solid rgba(255, 192, 203, 0.582) ;
-            }
-            main{
-                background-color: rgba(253, 253, 253, 0) ;
-                color: rgb(0,0,0); 
-                text-align: center;
-                padding: 16px;
-            }
-            img{
-                width: 100px;
-                height: 100px;
-            }
-             .artigo-autor{
-             font-weight: bold;
-            }
-        </style>
-    </head>
 
-    <body>
-        <header>
-             <h1>Meu blog fashion</h1>
-        </header>
-        <main>
-            <img src="ve.png" alt="Ilustração em estilo de logotipo mostrando um manequim de costura com um vestido rosa pastel de saia rodada. O desenho possui traços delicados e minimalistas, com detalhes em tons suaves de rosa, incluindo pequenos corações e a silhueta de uma mulher ao fundo. A composição circular transmite elegância, moda e feminilidade.">
-        <div>
-                <h2>por:Mariana santana</h2> 
-                <p class =  "artigo-autor">Boas-vindas(o) ao meu novo blog! Aqui vou compartilhar as novidades do mundo da 
-                moda. </p>
-                <button>👍 <span>0</span> </button>
-                <button>👍 <span>0</span> </button>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <style>
+        header {
+            background-color: rgba(255, 192, 203, 0.527);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 5px solid rgba(255, 192, 203, 0.582);
+        }
 
-        </main>
-    </body>
+        main {
+            background-color: rgba(253, 253, 253, 0);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 16px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meu blog fashion</h1>
+    </header>
+    <main>
+        <article>
+            <img src="ve.png"
+                alt="Ilustração em estilo de logotipo mostrando um manequim de costura com um vestido rosa pastel de saia rodada. O desenho possui traços delicados e minimalistas, com detalhes em tons suaves de rosa, incluindo pequenos corações e a silhueta de uma mulher ao fundo. A composição circular transmite elegância, moda e feminilidade.">
+            <div>
+                <h2>por:Mariana santana</h2>
+                <p class="artigo-autor">Boas-vindas(o) ao meu novo blog! Aqui vou compartilhar as novidades do mundo da
+                    moda. </p>
+
+                <button>👍 <span>0</span></button>
+                <button>💕<span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h2>por:Mariana santana</h2>
+                <p class="artigo-autor">As últimas novidades do mundo da moda destacam as coleções de Verão 2027 masculino, recém-apresentadas em Paris, e as tendências focadas em transparência, alfaiataria e estética minimalista para a temporada atual. </p>
+                
+                <button>👍 <span>0</span></button>
+                <button>💕<span>0</span></button>
+                <button>👎<span>0</span></button>
+            </div>
+        </article>
+
+    </main>
+</body>
 <script>
-    const botao = document.querySelectorAll("button");
-    botao.addEventListener("click", botaoClicado);
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu == false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
 
-    function botaoClicado(){
-        console.log("fui clicado");
-        let texto = botao.querySelector("span");
-        texto.textContent++;
-    }
- 
+
 </script>
+
 </html>
-
-
