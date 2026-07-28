@@ -10,14 +10,16 @@ header {
 main {
     background-color: rgba(253, 253, 253, 0);
     color: rgb(0, 0, 0);
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 16px;
 }
 
-article {
-    display: flex;
-}
+    article {
+        display: center;
+       
+    }
 
 img {
     width: 100px;
