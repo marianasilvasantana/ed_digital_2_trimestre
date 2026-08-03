@@ -1,10 +1,11 @@
 header {
-    background-color: rgba(255, 192, 203, 0.527);
+     background-color: rgba(255, 192, 203, 0.527);
     color: rgb(0, 0, 0);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 5px solid rgba(255, 192, 203, 0.582);
+   border: 5px solid rgba(255, 192, 203, 0.582)
+    padding: 15px
 }
 
 main {
@@ -17,15 +18,32 @@ main {
 }
 
     article {
-        display: center;
-       
+        display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    margin-bottom: 40px;    
+    border-bottom: 1px solid #eee; 
+    
     }
 
 img {
     width: 100px;
     height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .artigo-autor {
     font-weight: bold;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
 }
