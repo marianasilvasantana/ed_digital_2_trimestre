@@ -1,72 +1,83 @@
-body{
-    max: width 100vw;;
+
+:root {
+    --cor-primaria: #F26A8D;
+    --cor-segundaria: #DD2D4A;
+    --cor-fundo: #CBEEF3;
+    --cor-texto: #000;
+    --cor-contraste: #880D1E;
+    --cor-botao: #CBEEF3;
+
+    --fonte-texto:cursive, sans-scrif
 }
 
-header {
-     background-color: rgba(47, 60, 240, 0.356);
-    color: rgb(0, 0, 0);
+.tema-escuro {
+    --cor-primaria: #0D9572;
+    --cor-segundaria: #22D2B5;
+    --cor-fundo: #2b0f0a;
+    --cor-texto: #FFFFFF;
+    --cor-contraste: #77F2E1;
+    --cor-botao: #34110C;
+    
+}
+
+
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-   border: 5px solid rgb(226, 204, 255)
-   padding:15px
+    border: 5px solid rgb(226, 204, 255);  
+    padding: 15px;
+
+    font-family: var(--fonte-texto);
 }
 
 main {
-    background-color: rgba(253, 253, 253, 0);
-    color: rgb(0, 0, 0);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     text-align: center;
     margin: 0 auto;
     padding: 16px;
 }
 
-    article {
-        display: flex;
+article {
+    display: flex;
     flex-direction: column; 
     align-items: center;    
     justify-content: center;
     margin-bottom: 40px;    
-    border-bottom: 1px solid #eee; 
-    
-    }
+    border-bottom: 1px solid var(--cor-botao); 
+}
 
- img {
+img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-img.capa-livro {
-    width: 250px;        
-    height: 350px;   
-    border: 3px solid #333;
-    border-radius: 0; }
-
-img.capa-livro2 {
-    width: 250px;        
-    height: 350px;
-    border: 3px solid #333;
-    border-radius: 0;}
-
-    img.capa-livro3 {
+img.capa-livro,
+img.capa-livro2,
+img.capa-livro3 {
     width: 250px;        
     height: 350px; 
-    border: 3px solid #333;
-    border-radius: 0;}
-
+    border: 3px solid var(--cor-texto);
+    border-radius: 0;
+}
 
 .artigo-autor {
     font-weight: bold;
 }
 
 button {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto); 
+    border: 1px solid var(--cor-contraste); 
     border-radius: 20px;
     padding: 8px 15px;
     margin: 5px;
     cursor: pointer;
     font-size: 14px;
 }
-
